@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    padding: 50px 5%;
+    background: url("arriere-plan-particules-technologie-realiste-abstraite_52683-33064.jpg") no-repeat center / cover;
+}
+
+.container{
+    position: relative;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.153);
+    backdrop-filter: blur(30px);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: antiquewhite;
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+}
+
+@keyframes zoom-in {
+100%{
+    transform: scale(1);
+}
+
+}
+
+.cnt{
+    margin: 100px;
+}
+.cn{
+    margin: 100px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30%;
+    background: #fff;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    transition: .5s;
+    
+}
+.btn:hover{
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+}
+

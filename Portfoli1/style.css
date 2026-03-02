@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: initial;
+}
+ 
+body{
+    height: 100vh;
+    background: url("arriere-plan-particules-technologie-realiste-abstraite_52683-33064.jpg") no-repeat center / cover;
+}
+
+.s1{
+    position: relative;
+    height: 100%;
+    background: rgba(245, 245, 247, 0.163);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+}
+
+nav{
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+
+.container {
+    border-radius: 30px;
+    transform: scale(0);
+    animation: zoom-in 1s ease forwards;
+
+}
+
+@keyframes zoom-in {
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.animated {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slide-in 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes slide-in {
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.logo{
+    font-size: 25px;
+    color: #0905d7;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #dcdcef;
+    text-decoration: none;
+    font-weight: 400;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+
+}
+
+.navbar a:hover,
+.navbar a.active{
+    border-color: #0707d3;
+}
+
+.home {
+    display:flex;
+    align-items: center;
+    height: 100%;
+    gap: 50px;
+    padding: 50% 5% 1;
+    color: #1309a7;
+    animation-delay: 1.5s;
+}
+
+.home-detail h1{
+    font-size: 55px;
+    line-height: 1;
+}
+
+.home-detail h2{
+    font-size: 32px;
+}
+
+
+.lgu{
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(0, 2, 3);
+    border: 1px solid rebeccapurple;
+    border-radius: 50px;
+    background-color: whitesmoke;
+    font-size: 20pt;
+    padding: 20px;
+}
+.lgu h1{
+    font-style: italic;
+    color: rebeccapurple;
+    padding-bottom: 20px;
+}
+.lgu li{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    margin-top: 30px;
+    background-color: rgb(245, 245, 245);
+    color: #1309a7;
+    display: flex;
+
+}
+
+.serve{
+    padding: 30px;
+    border: 1em solid blue;
+}
+.servise{
+    padding: 30px;
+    border: 1em solid blue;
+}
