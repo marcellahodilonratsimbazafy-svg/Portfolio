@@ -2,139 +2,174 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: initial;
+
 }
- 
+
 body{
-    height: 100vh;
-    background: url("arriere-plan-particules-technologie-realiste-abstraite_52683-33064.jpg") no-repeat center / cover;
+    background: #f9fafb;
+    color: #2d3748;
+    transition: all 0.4s ease;
+    line-height: 1.7;
 }
 
-.s1{
+body.dark-mode{
+    background: #1a202c;
+    color: #e2e8f0;
+}
+header {
+    background: linear-gradient(135deg,#000568,#e83e3e,#1b18a7);
+    padding: 60px 20px;
+    text-align: center;
     position: relative;
-    height: 100%;
-    background: rgba(245, 245, 247, 0.163);
-    border-radius: 30px;
-    backdrop-filter: blur(30px);
+    overflow: hidden;
 }
 
-nav{
-    padding: 10px 5%;
+header h1 {
+    font-size: 2.5em;
+    color: 0;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+nav {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(0.1px);
+    padding: 0 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;  
+    animation: fadeIn 1s ease-out;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
-
-.container {
-    border-radius: 30px;
-    transform: scale(0);
-    animation: zoom-in 1s ease forwards;
-
-}
-
-@keyframes zoom-in {
-    100%{
-        transform: scale(1);
-    }
-}
-
-
-.animated {
-    transform: translateY(30px);
-    opacity: 0;
-    animation: slide-in 1s ease forwards;
-    animation-delay: 1s;
-}
-
-@keyframes slide-in {
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-
-
-.logo{
-    font-size: 25px;
-    color: #0905d7;
+nav a {
+    color: #000568;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.95em;
+    position: relative;
+    transition: color 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    animation: fadeIn 1s ease-out;
 
 }
 
-.navbar a{
-    font-size: 18px;
-    color: #dcdcef;
-    text-decoration: none;
-    font-weight: 400;
-    margin-left: 35px;
-    border-bottom: 2px solid transparent;
+section {
+    margin-bottom: 80px;
+    animation: fadeIn 1s ease-out;
+}
+
+section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #236deb;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+}
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 5px;
+    background: #883ee8;
+    border-radius: 0 2px; 
+    animation: fadeIn 1s ease-out;
+}
+
+article {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+
+article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-out;
 
 }
 
-.navbar a:hover,
-.navbar a.active{
-    border-color: #0707d3;
-}
-
-.home {
-    display:flex;
-    align-items: center;
+article::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
     height: 100%;
-    gap: 50px;
-    padding: 50% 5% 1;
-    color: #1309a7;
-    animation-delay: 1.5s;
+    background: #236deb;
+    transition: width 0.3s ease;
+    animation: fadeIn 1s ease-out;
 }
 
-.home-detail h1{
-    font-size: 55px;
-    line-height: 1;
+article:hover::before{
+    width: 10px;
+    animation: fadeIn 1s ease-out;
 }
 
-.home-detail h2{
-    font-size: 32px;
+article h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
 }
 
-
-.lgu{
-    margin: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: rgb(0, 2, 3);
-    border: 1px solid rebeccapurple;
-    border-radius: 50px;
-    background-color: whitesmoke;
-    font-size: 20pt;
-    padding: 20px;
-}
-.lgu h1{
-    font-style: italic;
-    color: rebeccapurple;
-    padding-bottom: 20px;
-}
-.lgu li{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+article p {
+    color: #2d3748;
+    line-height: 1.8;
+    animation: fadeIn 1s ease-out;
 }
 
-main{
-    margin-top: 30px;
-    background-color: rgb(245, 245, 245);
-    color: #1309a7;
-    display: flex;
-
-}
-
-.serve{
+aside {
+    background: linear-gradient(145deg,#e5e7eb,#d1d5dd);
     padding: 30px;
-    border: 1em solid blue;
+    border-radius: 12px;
+    margin-bottom: 60px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
 }
-.servise{
-    padding: 30px;
-    border: 1em solid blue;
+
+aside button {
+    padding: 12px 24px;
+    background: #3b82f6;
+    animation: fadeIn 1s ease-out;
+
 }
+
