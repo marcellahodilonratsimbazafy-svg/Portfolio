@@ -1,57 +1,163 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
 }
 
 body{
-    height: 100vh;
-    padding: 50px 5%;
-    background: url("arriere-plan-particules-technologie-realiste-abstraite_52683-33064.jpg") no-repeat center / cover;
+    background: #f9fafb;
+    color: #2d3748;
+    transition: all 0.4s ease;
+    line-height: 1.7;
 }
 
-.container{
+body.dark-mode{
+    background: #1a202c;
+    color: #e2e8f0;
+}
+header {
+    background: linear-gradient(135deg,#000568,#e83e3e,#1b18a7);
+    padding: 60px 20px;
+    text-align: center;
     position: relative;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.153);
-    backdrop-filter: blur(30px);
-    border-radius: 30px;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: 0;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+nav {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(0.1px);
+    padding: 0 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;  
+    animation: fadeIn 1s ease-out;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: antiquewhite;
-    transform: scale(0);
-    animation: zoom-in 1s ease forwards;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
-@keyframes zoom-in {
-100%{
-    transform: scale(1);
-}
-
-}
-
-.cnt{
-    margin: 100px;
-}
-.cn{
-    margin: 100px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 30%;
-    background: #fff;
-    border: 2px solid #fff;
-    border-radius: 40px;
+nav a {
+    color: #000568;
     text-decoration: none;
-    font-weight: 500;
-    color: #333;
-    transition: .5s;
-    
+    font-weight: 600;
+    font-size: 0.95em;
+    position: relative;
+    transition: color 0.3s ease;
+    animation: fadeIn 1s ease-out;
 }
-.btn:hover{
-    background: transparent;
-    box-shadow: none;
-    color: #fff;
+
+
+main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    animation: fadeIn 1s ease-out;
+
 }
+
+section {
+    margin-bottom: 80px;
+    animation: fadeIn 1s ease-out;
+}
+
+section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #236deb;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+}
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 5px;
+    background: #883ee8;
+    border-radius: 0 2px; 
+    animation: fadeIn 1s ease-out;
+}
+
+article {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+
+article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-out;
+
+}
+
+article::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #236deb;
+    transition: width 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+article:hover::before{
+    width: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+article h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+
+article ul {
+    color: #2d3748;
+    line-height: 1.8;
+    animation: fadeIn 1s ease-out;
+}
+
+
 
