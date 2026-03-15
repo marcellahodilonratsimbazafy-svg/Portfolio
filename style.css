@@ -144,6 +144,7 @@ header{
 
 .l2{
     color: #f4ebeb;
+    display:none;
 }
 
 
@@ -155,6 +156,10 @@ header{
     .home{
         display: none;
     }
+      .l2{
+        display: block;
+    }
+    
        
 }
 
